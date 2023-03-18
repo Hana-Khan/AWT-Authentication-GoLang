@@ -1,0 +1,17 @@
+@host = localhost:8080
+
+
+# So, what we are doing is, sending a POST request to the api/user/register endpoint with a JSON body that defines the username, email, name, and password of the user we need to be registered into the application. 
+# If your REST client is properly installed on your VS Code, you would see a send request option below Line 7. Hit it!
+// Register User
+POST http://{{host}}/api/user/register HTTP/1.1
+content-type: application/json
+    
+{
+    "name": "Test User",
+    "username": "test.user",
+    "email": "test@go.com",
+    "password": "123465789"
+}
+
+###
