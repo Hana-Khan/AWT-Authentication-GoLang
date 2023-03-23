@@ -39,6 +39,8 @@ func initRouter() *gin.Engine {
 		secured := api.Group("/secured").Use(middlewares.Auth())
 		{
 			secured.GET("/ping", controllers.Ping)
+			secured.GET("/login", controllers.Login)
+
 		}
 	}
 	return router

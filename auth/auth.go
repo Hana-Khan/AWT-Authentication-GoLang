@@ -4,7 +4,8 @@ import (
 	"time"
 	"github.com/dgrijalva/jwt-go"
 )
-// Here, we are declaring a secret key that will be used later for generating JWTs. For now, the key is “supersecretkey”. You should be ideally storing this value outside the code. But for the sake of simplicity, let’s proceed as it is.
+// Here, we are declaring a secret key that will be used later for generating JWTs. For now, the key is “supersecretkey”. 
+// You should be ideally storing this value outside the code. But for the sake of simplicity, let’s proceed as it is.
 var jwtKey = []byte("supersecretkey")
 // We define a custom struct for JWT Claims which will ultimately become the payload of the JWT 
 type JWTClaim struct {
