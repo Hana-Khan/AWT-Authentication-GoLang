@@ -32,6 +32,7 @@ func initRouter() *gin.Engine {
 		// Similarly, for the user registration endpoint too.
 		api.POST("/token", controllers.GenerateToken)
 		api.POST("/user/register", controllers.RegisterUser)
+		api.POST("/user/login", controllers.Login)
 
 		// Now, we need to secure all the endpoints that will come under the api/secured/ routes. 
 		// Here is where we tell GIN to use the middleware that we created. 
@@ -39,7 +40,6 @@ func initRouter() *gin.Engine {
 		secured := api.Group("/secured").Use(middlewares.Auth())
 		{
 			secured.GET("/ping", controllers.Ping)
-			secured.GET("/login", controllers.Login)
 
 		}
 	}
