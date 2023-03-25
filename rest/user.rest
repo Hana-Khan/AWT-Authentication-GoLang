@@ -8,10 +8,10 @@ POST http://{{host}}/api/user/register HTTP/1.1
 content-type: application/json
     
 {
-    "name": "Test User",
-    "username": "test.user",
-    "email": "test@go.com",
-    "password": "123465789"
+    "name": "Test User 2",
+    "username": "test.user.two",
+    "email": "testuser2@go.com",
+    "password": "123456789"
 }
 
 ###

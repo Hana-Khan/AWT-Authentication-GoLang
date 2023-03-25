@@ -9,6 +9,3 @@ func Ping(context *gin.Context) {
 	context.JSON(http.StatusOK, gin.H{"message": "pong"})
 }
 
-func Login(context *gin.Context) {
-	context.JSON(http.StatusOK, gin.H{"message": "success"})
-}
